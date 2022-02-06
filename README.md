@@ -59,7 +59,11 @@ La animación de la IA enemiga, se hizo a través del modelo 3D del enemigo. Se 
 
 ### Skill
 
-La Skill del jugador, es lanzar el hacha que a una determinada distancia máxima o cuando el jugador lo decide regresa a él. Tiene dos funciones una es lanzar el hacha y la otra es que regrese. Al lanzar el hacha básicamente lo que hace es aplicarle dos fuerzas, una de impulso y otra de torque. La verdadera mágica está a la hora de hacer regresar la hacha. Gracias a la fórmula de la curva cuadrática de Bezier, podemos hacer regresar al hacha siguiendo una trayectoria curva. Los tres puntos que usamos son: La posición de la zona de interación que es de donde lanzamos el hacha, la zona final donde decidimos que regrese el hacha y un punto que definimos al lado de la zona de interación un poco más adelante. Siguiendo esta fórmula para tres puntos $$B(t) = (1 - t)^{2} {P}_0 + 2t(1 - t){P}_1 + t^{2}{P}_2  { , } t \in [0,1]$$ vamos calculando los puntos en cada instante hasta que el hacha regresa. Lo que hace al regresar es ir a la posición de estos puntos.
+La Skill del jugador, es lanzar el hacha que a una determinada distancia máxima o cuando el jugador lo decide regresa a él. Tiene dos funciones una es lanzar el hacha y la otra es que regrese. Al lanzar el hacha básicamente lo que hace es aplicarle dos fuerzas, una de impulso y otra de torque. La verdadera mágica está a la hora de hacer regresar la hacha. Gracias a la fórmula de la curva cuadrática de Bezier, podemos hacer regresar al hacha siguiendo una trayectoria curva. Los tres puntos que usamos son: La posición de la zona de interación que es de donde lanzamos el hacha, la zona final donde decidimos que regrese el hacha y un punto que definimos al lado de la zona de interación un poco más adelante. Siguiendo esta fórmula para tres puntos 
+
+![Fórmula](img/formula.jpg)
+
+vamos calculando los puntos en cada instante hasta que el hacha regresa. Lo que hace al regresar es ir a la posición de estos puntos.
 
 ### Coger objetos
 
@@ -73,7 +77,7 @@ En nuestro caso, se ha utilizado para hacer las pruebas un mando para la PS4, si
 * Para la interacción en la escena, tiene que pulsar el ```buttonWest``` o ```botón del cuadrado```. Las acciones disponibles son: Coger el arma, abrir la carta y apertura de puertas (siempre que el jugador se encuentre lo suficientemente cerca de la misma).
 * Para que el jugador pueda lanzar el arma, tiene que usar el ```rightTrigger``` o ```botón de R2```.
 
-![Mapeo del mando PS4](img/ps4-controller.png)
+![Mapeo del mando PS4](img/ps4-controller.jpg)
 
 ## Acta de acuerdos del grupo
 
