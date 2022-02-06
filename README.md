@@ -1,4 +1,4 @@
-# Proyecto final: Limbo, raise to heaven
+# Proyecto final: Limbo, rise to heaven
 ## Asignatura: Interfaces Inteligentes
 
 ## Autores: 
@@ -7,7 +7,7 @@
 * [Vanessa Valentina Villalba Pérez](mailto:alu0101265704@ull.edu.es)
 
 ## Tabla de contenidos
-- [Proyecto final: Limbo, raise to heaven](#proyecto-final-limbo-raise-to-heaven)
+- [Proyecto final: Limbo, rise to heaven](#proyecto-final-limbo-rise-to-heaven)
   - [Asignatura: Interfaces Inteligentes](#asignatura-interfaces-inteligentes)
   - [Autores:](#autores)
   - [Tabla de contenidos](#tabla-de-contenidos)
