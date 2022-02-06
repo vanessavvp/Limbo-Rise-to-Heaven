@@ -1,29 +1,26 @@
-# Proyecto final: Limbo, raise to heaven
+# Proyecto final: Limbo - Raise to Heaven
 ## Asignatura: Interfaces Inteligentes
 
 ## Autores: 
-* [Marta Julia González Padrón](mailto:)
+* [Marta Julia González Padrón](mailto:alu0101254487@ull.edu.es)
 * [Adal Díaz Fariña](mailto:alu0101112251@ull.edu.es)
 * [Vanessa Valentina Villalba Pérez](mailto:alu0101265704@ull.edu.es)
 
 ## Tabla de contenidos
-- [Proyecto final: Limbo, raise to heaven](#proyecto-final-limbo-raise-to-heaven)
-  - [Asignatura: Interfaces Inteligentes](#asignatura-interfaces-inteligentes)
-  - [Autores:](#autores)
-  - [Tabla de contenidos](#tabla-de-contenidos)
   - [APK del prototipo](#apk-del-prototipo)
   - [Funcionamiento del prototipo](#funcionamiento-del-prototipo)
   - [Implementación práctica](#implementación-práctica)
-    - [Interfaz Multimodal](#interfaz-multimodal)
-    - [IA enemiga](#ia-enemiga)
-    - [Sistema de vida y Checkpoint](#sistema-de-vida-y-checkpoint)
-    - [Skill](#skill)
-    - [Coger objetos](#coger-objetos)
-    - [Controles](#controles)
+  - [Interfaz Multimodal](#interfaz-multimodal)
+  - [IA enemiga](#ia-enemiga)
+  - [Sistema de vida y Checkpoint](#sistema-de-vida-y-checkpoint)
+  - [Interfaz de Usuario](#interfaz-de-usuario)
+  - [Habilidad](#habilidad)
+  - [Coger objetos](#coger-objetos)
+  - [Controles](#controles)
   - [Acta de acuerdos del grupo](#acta-de-acuerdos-del-grupo)
-    - [Objetivo](#objetivo)
-    - [Escenas](#escenas)
-    - [Maquetación de escenas](#maquetación-de-escenas)
+  - [Objetivo](#objetivo)
+  - [Escenas](#escenas)
+  - [Maquetación de escenas](#maquetación-de-escenas)
   - [Problemas encontrados y sus soluciones](#problemas-encontrados-y-sus-soluciones)
   - [Demo de ejecución](#demo-de-ejecución)
 
@@ -55,11 +52,19 @@ La animación de la IA enemiga, se hizo a través del modelo 3D del enemigo. Se 
 
 ### Sistema de vida y Checkpoint 
 
-// Marta
+El sistema de vida se ha implementado a lo largo de todos los niveles. El jugador tiene 5 vidas y cada vez que colisiona con un obstáculo o es golpeado por un enemigo se le resta vida. Cuando el usuario pierde todas las vidas, se muere pero... ¿Qué pasa entonces? Se ha implementado un sistema de respawn o reaparición con puntos de control o también llamados checkpoints. Lo que hacemos es almacenar la posición que tiene el usuario al comenzar la escena y cuando muere es trasladado a esa posición. Además también hemos contemplado la existencia de puntos de control para que cuando el usuario pueda guardar su nuevo punto de partida en caso de muerte al reaparecer. Para que todas estas funcionalidades no se vean de manera brusca durante la partida, se ha implementado un controlador para la *interfaz de usuario*. Es importante destacar el uso de las corrutinas para mejorar la eficiencia del juego y poder atrasar la ejecución de otros apartados del código.
 
-### Skill
+### Interfaz de Usuario
 
-La Skill del jugador, es lanzar el hacha que a una determinada distancia máxima o cuando el jugador lo decide regresa a él. Tiene dos funciones una es lanzar el hacha y la otra es que regrese. Al lanzar el hacha básicamente lo que hace es aplicarle dos fuerzas, una de impulso y otra de torque. La verdadera mágica está a la hora de hacer regresar la hacha. Gracias a la fórmula de la curva cuadrática de Bezier, podemos hacer regresar al hacha siguiendo una trayectoria curva. Los tres puntos que usamos son: La posición de la zona de interación que es de donde lanzamos el hacha, la zona final donde decidimos que regrese el hacha y un punto que definimos al lado de la zona de interación un poco más adelante. Siguiendo esta fórmula para tres puntos 
+Para que toda la información sea mostrada al usuario de manera que la entienda hemos creado diferentes objetos *Canvas* para ello. Por una parte tenemos la cinemática en la introducción para que el usuario entienda el contexto al igual que una pequeña cinemática al concluir para volver al menú principal. Después dentro de cada nivel tenemos un Canvas que muestra la vida actual del jugador asi como los destellos rojos cuando es herido y las transiciones desde y hacia negro para que los cambios de escenas y de posiciones sean mas fluidos. Además dentro de los niveles ha sido necesario añadirle instrucciones al usuario como en el nivel 2 indicarle que abra la puerta con el *cuadrado*. En el nivel 1 se le indica que coja lea la carta (que también fué creada con otro Canvas) y coja el arma con el mismo *cuadrado* y que utilice el arma usando el botón *R2*.
+
+![Canvas](img/Canvas.PNG)
+
+![Vida](img/Vida.PNG)
+
+### Habilidad
+
+La habilidad del jugador, es lanzar el hacha que a una determinada distancia máxima o cuando el jugador lo decide regresa a él. Tiene dos funciones una es lanzar el hacha y la otra es que regrese. Al lanzar el hacha básicamente lo que hace es aplicarle dos fuerzas, una de impulso y otra de torque. La verdadera mágica está a la hora de hacer regresar la hacha. Gracias a la fórmula de la curva cuadrática de Bezier, podemos hacer regresar al hacha siguiendo una trayectoria curva. Los tres puntos que usamos son: La posición de la zona de interación que es de donde lanzamos el hacha, la zona final donde decidimos que regrese el hacha y un punto que definimos al lado de la zona de interación un poco más adelante. Siguiendo esta fórmula para tres puntos 
 
 ![Fórmula](img/formula.PNG)
 
@@ -94,6 +99,7 @@ Juego por niveles. El usuario tiene que pasar una serie de niveles para poder co
 | Nivel 1     | Adal       |
 | Nivel 2     | Vanessa    |
 | Nivel 3     | Marta      |
+| Outro       | Marta      |
 
 Para una implementación más rápida y asíncrona, decidimos repartirnos los niveles del juego. Por otro lado, cuestiones como la unificación de las diferentes escenas, la aplicación de RV con cardboards y la ambientación del juego fue realizada en conjunto, así como la lluvia de ideas que nos permitió orientar y diseñar la idea de cada nivel para lograr el producto final. Muchas veces a los largo del desarrollo hicimos uso de técnicas de pair programming para ayudarnos entre nosotros y así superar las dificultades de los niveles y problemas encontrados.
 
@@ -131,7 +137,7 @@ Para el fuego se han echo modificaciones a un prefab que disponía de diferentes
 
 ```Nivel 3```
 
-// Marta
+Este nivel representa casi el final de la odisea donde el cielo puede parecer estar cerca aunque un mínimo desliz nos lleva a la muerte. En esta escena hay que superar una serie plataformas con características para realmente llegar al cielo. Hay nubes con propiedades de colchoneta saltarina otras que se mueven para arriba y abajo y otras que se mueven para los lados. En medio hay una plataforma de rocas flotantes con un punto de control ya que la dificultad de este nivel es mas elevada. Tras superar otra serie de nubes e incluso una bola de demolición, el usuario llega a la luz final y pasa a la cinemática donde se le indica que ha ganado, se le dice una moraleja y salen los créditos finales.
 
 ## Problemas encontrados y sus soluciones
 
@@ -147,9 +153,7 @@ Para el fuego se han echo modificaciones a un prefab que disponía de diferentes
 
 * **IA enemiga**: A la hora de atacar tuvimos que sacrificar el diseño del proyectil de la IA en pros de aumentar el acierto. Al principio la IA tenia unas fuerza definidas para lanzar el proyectil pero eran inexactas cuando el jugador se movía, por lo que hubo que modificarlas. Las nuevas fuerzas utilizan el calculo de la distancia con el jugador, pero se le aplica una fuerza mucho mayor por lo que el efecto de particulas del proyectil se ve afectado.  
 
-* **First person controller**
-
-// Marta
+* **First Person Character Controller**: Para poder ver la perspectiva del personaje en primera persona, nos hemos aprovechado del *First Person Character Controller* del paquete *Starter Assests*. No obstante, nos dió muchos problemas, sobretodo para implementar el nivel 3 ya que el objeto como tal no tiene un componente *Rigidbody* pero si lo simula. Es por ello que en ocasiones no terminan de cuajar algunas funcionalidades. Para solverntar esto tuvimos que entender todo este controlador e incluso añadir y modificar funciones para que se adaptara a nuestras necesidades. Entre ellas modificamos la función de movimiento y tuvimos que crear una nueva para poder crear nubes "saltarinas" que manipulara la capacidad de salto. Tambien una funcionalidad para que cuando el jugador fuese atacado se impulsara un poco para atrás.
 
 * **Realidad virtual**: A la hora de implementar la realidad virtual decidimos seguir los pasos aplicados durante la práctica realizada en el horario de clases, pero nos encontramos que con esa configuración habían fallos. Principalmente con el reticle pointer ya que al activar el debug rays nos dimos cuenta que efectivamente estaba generando rayos coherentes pero a la hora de realizar alguna acción con el OnPointerEnter, era incapaz de reconocer el objeto al que le habíamos asignado el collider, el puntero nisiquiera cambiaba de tamaño. 
 
@@ -157,8 +161,8 @@ Por lo que decidimos realizar algunas pruebas y nos encontramos con que no era n
 
 Adicionalmente, debido a la longitud del juego decidimos desactivar el reconocimiento del movimiento de la cabeza, ya que también utilizamos un mando, consideramos que la interacción con el juego es más sencilla e intuitiva de esta manera.
 
-* **Canvas**
+* **Canvas**: El mayor problema que nos dió el Canvas fue al conseguir al fin unas gafas de realidad virtual y querer probar nuestro juego, que ningun canvas se veía porque el modo de renderizado del mismo estaba en *Screen Space* y no en *World Space* que es el único que funciona con la realidad virtual. Perdimos mucho tiempo en adaptar los canvas pero conseguimos solucionarlo.
 
-// Marta
+
 
 ## Demo de ejecución 
