@@ -1,4 +1,4 @@
-# Proyecto final: Limbo, rise to heaven
+# Proyecto final: Limbo, raise to heaven
 ## Asignatura: Interfaces Inteligentes
 
 ## Autores: 
@@ -7,7 +7,7 @@
 * [Vanessa Valentina Villalba Pérez](mailto:alu0101265704@ull.edu.es)
 
 ## Tabla de contenidos
-- [Proyecto final: Limbo, rise to heaven](#proyecto-final-limbo-rise-to-heaven)
+- [Proyecto final: Limbo, raise to heaven](#proyecto-final-limbo-raise-to-heaven)
   - [Asignatura: Interfaces Inteligentes](#asignatura-interfaces-inteligentes)
   - [Autores:](#autores)
   - [Tabla de contenidos](#tabla-de-contenidos)
@@ -61,7 +61,7 @@ La animación de la IA enemiga, se hizo a través del modelo 3D del enemigo. Se 
 
 La Skill del jugador, es lanzar el hacha que a una determinada distancia máxima o cuando el jugador lo decide regresa a él. Tiene dos funciones una es lanzar el hacha y la otra es que regrese. Al lanzar el hacha básicamente lo que hace es aplicarle dos fuerzas, una de impulso y otra de torque. La verdadera mágica está a la hora de hacer regresar la hacha. Gracias a la fórmula de la curva cuadrática de Bezier, podemos hacer regresar al hacha siguiendo una trayectoria curva. Los tres puntos que usamos son: La posición de la zona de interación que es de donde lanzamos el hacha, la zona final donde decidimos que regrese el hacha y un punto que definimos al lado de la zona de interación un poco más adelante. Siguiendo esta fórmula para tres puntos 
 
-![Fórmula](img/formula.jpg)
+![Fórmula](img/formula.PNG)
 
 vamos calculando los puntos en cada instante hasta que el hacha regresa. Lo que hace al regresar es ir a la posición de estos puntos.
 
