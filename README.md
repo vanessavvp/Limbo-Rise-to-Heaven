@@ -168,3 +168,4 @@ Adicionalmente, debido a la longitud del juego decidimos desactivar el reconocim
 * **Canvas**: El mayor problema que nos dió el Canvas fue al conseguir al fin unas gafas de realidad virtual y querer probar nuestro juego, que ningun canvas se veía porque el modo de renderizado del mismo estaba en *Screen Space* y no en *World Space* que es el único que funciona con la realidad virtual. Perdimos mucho tiempo en adaptar los canvas pero conseguimos solucionarlo.
 
 ## Demo de ejecución 
+[Enlace al video](https://drive.google.com/file/d/1_WBxuJdBjsChiYYMH6IfngQlG8HuyFeC/view?usp=sharing)
