@@ -25,6 +25,8 @@
   - [Problemas encontrados y sus soluciones](#problemas-encontrados-y-sus-soluciones)
   - [Demo de ejecución](#demo-de-ejecución)
 
+## Presentación
+* [Enlace a las diapositivas](https://www.canva.com/design/DAE3iapWzcg/xVX3AsjMeUCmsPNeyCfsmg/view?utm_content=DAE3iapWzcg&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
   
 ## APK del prototipo
 * [Enlace de descarga](https://drive.google.com/file/d/1-XqJnTJjw_UeHNsAB6knFjI0iSLYKh67/view?usp=sharing)
