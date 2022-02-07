@@ -8,6 +8,7 @@
 
 ## Tabla de contenidos
   - [APK del prototipo](#apk-del-prototipo)
+  - [Carpeta con contenidos](#carpeta-con-contenidos)
   - [Funcionamiento del prototipo](#funcionamiento-del-prototipo)
   - [Implementación práctica](#implementación-práctica)
   - [Interfaz Multimodal](#interfaz-multimodal)
@@ -26,7 +27,10 @@
 
   
 ## APK del prototipo
-* [Enlace de descarga]()
+* [Enlace de descarga](https://drive.google.com/file/d/1-XqJnTJjw_UeHNsAB6knFjI0iSLYKh67/view?usp=sharing)
+
+## Carpeta con contenidos
+* [Carpeta de Google  Drive](https://drive.google.com/drive/folders/1NBZegeNUa-f89tKr0pNglLsoqENmG-jV?usp=sharing)
 
 ## Funcionamiento del prototipo
 El jugador acaba de morir y se despierta desorientado, lo que acaba de descubrir es que debe de luchar para poder "ascender" al mundo de los cielos en paz. Para lograr esto se ha dividido el juego en diferentes niveles los cuales representan al infierno, al limbo y al cielo respectivamente.
@@ -162,7 +166,5 @@ Por lo que decidimos realizar algunas pruebas y nos encontramos con que no era n
 Adicionalmente, debido a la longitud del juego decidimos desactivar el reconocimiento del movimiento de la cabeza, ya que también utilizamos un mando, consideramos que la interacción con el juego es más sencilla e intuitiva de esta manera.
 
 * **Canvas**: El mayor problema que nos dió el Canvas fue al conseguir al fin unas gafas de realidad virtual y querer probar nuestro juego, que ningun canvas se veía porque el modo de renderizado del mismo estaba en *Screen Space* y no en *World Space* que es el único que funciona con la realidad virtual. Perdimos mucho tiempo en adaptar los canvas pero conseguimos solucionarlo.
-
-
 
 ## Demo de ejecución 
